@@ -14,7 +14,7 @@ CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 def parse_homework_status(homework):
     homework_name = homework.get('homework_name')
-    if homework.get('status') != 'approved':
+    if homework.get('status') == 'rejected':
         verdict = 'К сожалению в работе нашлись ошибки.'
     else:
         verdict = 'Ревьюеру всё понравилось, можно приступать к следующему уроку.'
